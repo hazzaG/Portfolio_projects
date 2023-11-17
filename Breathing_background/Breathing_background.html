@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing background</title>
+    <link rel="stylesheet" href="./Breathing_background.css">
+</head>
+
+<body>
+
+    <p id="checkfocus"></p>
+
+    <main id="fullmain" class="fullmain scroll">
+        <h1>This has a Breathing background</h1>
+        <ol>
+            <li>Create a Breathing background animation</li><br>
+            <li>Make the background reactive</li><br>
+            <li>Add a button to switch between light and dark mode</li>
+        </ol>
+    </main>
+
+
+
+</body>
+
+<script>
+    const checkfocus = document.getElementById("checkfocus")
+
+    function checkDocumentFocus() {
+        if (document.hasFocus()) {
+            checkfocus.textContent = "This document has focus";
+            checkfocus.style.background = "blue";
+            var fullmain = document.getElementById("fullmain")
+            fullmain.classList.add("scroll")
+
+        }
+        else {
+            checkfocus.textContent = "This document does not have focus";
+            checkfocus.style.background = "red";
+            var fullmain = document.getElementById("fullmain")
+            fullmain.classList.remove("scroll")
+        }
+    }
+
+    setInterval(checkDocumentFocus, 300);
+
+
+</script>
+
+</html>

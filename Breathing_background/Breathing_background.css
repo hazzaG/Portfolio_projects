@@ -24,32 +24,27 @@ body {
             #8ecae6,
             #219ebc,
             #023047);
-    transition: transform 2s;
+    transition: transform 3.8s;
     z-index: -1;
 }
 
+
+/*This moves the gradient. Not it's z-index is not specified so is 0. This means it will display before a -1 z-index */
 .scroll::before {
     transform: translateY(-50%);
 }
 
-p {
+
+.scrollneg::before {
+    transform: translateY(-75%);
+}
+
+
+/*p {
     font-size: 100px;
     z-index: 3;
 }
 
-/*@keyframes breathing {
-    33% {
-        background-image: linear-gradient(to top, #8ecae6, #219ebc, #023047);
-    }
-
-    66% {
-        background-image: linear-gradient(to top, #219ebc, #023047, #8ecae6);
-    }
-
-    99% {
-        background-image: linear-gradient(to top, #023047, #8ecae6, #219ebc);
-    }
-}*/
 
 
 .colors {
@@ -58,4 +53,4 @@ p {
     color: #023047;
     color: #fb8500;
     color: #ffb703;
-}
+}*/

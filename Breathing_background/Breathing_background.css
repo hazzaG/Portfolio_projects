@@ -34,12 +34,6 @@ body {
     transform: translateY(-50%);
 }
 
-
-.scrollneg::before {
-    transform: translateY(-75%);
-}
-
-
 /*p {
     font-size: 100px;
     z-index: 3;
@@ -54,3 +48,38 @@ body {
     color: #fb8500;
     color: #ffb703;
 }*/
+
+/*.scrollneg::before {
+    transform: translateY(-75%);
+}*/
+
+
+/* The following section is for the classes used to create the color switch/invert effects*/
+
+
+.wack {
+    z-index: 0;
+}
+
+
+.fullmain2 {
+    background-image: linear-gradient(#e68e9e, #bc2150, #47020d);
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.fullmain2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom,
+            #e68e9e, #bc2150, #47020d);
+    transition: transform 3.8s;
+    z-index: 2;
+}

@@ -19,6 +19,8 @@
             <li>Make the background reactive</li><br>
             <li>Add a button to switch between light and dark mode</li>
         </ol>
+
+        <button id="colorSwitch" type="button" onclick="colorSwitch()">Click me</button>
     </main>
 
 
@@ -56,6 +58,8 @@
     // This is the code to cause the CSS class to switch between the two postions on the gradient background
 
     let topBreath;
+    // this const might cause problems, I dont know//
+    const fullmain = document.getElementById("fullmain");
 
     function breathCheck() {
         if (topBreath) {
@@ -65,8 +69,8 @@
 
     // This is the Conditional (ternary) operator that performs the switch and functions similar to an if...else statement. NOTE it is important that all the class names that need to be switched and all the class names from the desired outcome of the switch are included.
     function breath() {
-        const breathSwitch = document.getElementById("fullmain");
-        breathSwitch.className = breathSwitch.className === "fullmain scroll" ? "fullmain" : "fullmain scroll";
+        var breathSwitch = document.getElementById("fullmain");
+        breathSwitch.className = breathSwitch.className === "fullmain scroll" ? "fullmain wack" : "fullmain scroll";
     }
 
     function stopBreath() {
@@ -79,7 +83,7 @@
     setInterval(breathFocus, 4600)
     function breathFocus() {
         if (document.hasFocus()) {
-            breath()
+            breath();
         }
         else {
 
@@ -89,6 +93,20 @@
 
 
     //----------------------------------------------------------
+
+    //This is the script for the colour switching//
+
+    function colorSwitch() {
+        fullmain.classList.add("fullmain2");
+        fullmain.classList.remove("fullmain");
+        fullmain.classList.remove("scroll");
+
+    }
+
+    // function toColor2() {
+    //  var ctc2 = document.getElementById("fullmain");
+    //ctc2.className = ctc2.className === "fullmain scroll" ? "fullmain2" : "fullmain scroll";
+    // }
 
 
 </script>

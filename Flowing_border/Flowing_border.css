@@ -1,0 +1,109 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    background-color: gray;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    border: 0.1vh solid black;
+    flex: content;
+    align-content: center;
+    align-self: stretch;
+    align-items: center;
+
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    border-image: url(./Assets/favicon-32x32-boom.png);
+    border-image-width: 5vh;
+    border-image-outset: 10%;
+    border-image-repeat: auto;
+    z-index: 1;
+}
+
+
+.container {
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.orb {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    background-image: conic-gradient(red, blue, green, red);
+    border-radius: 100%;
+    z-index: 1;
+
+}
+
+.orb:hover {
+    animation: spin 2s infinite linear;
+    transition: 2s;
+}
+
+/*Will become important to adjust speed of rotation at corners in order to get smooth rotation effect, this will require the angle of the corner from the center*/
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.shine {
+    pointer-events: none;
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    opacity: 0.2;
+    background-image: radial-gradient(white, black);
+    border-radius: 100%;
+    z-index: 2;
+
+}
+
+.hole {
+    pointer-events: none;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    opacity: 1;
+    background-color: black;
+    border-radius: 100%;
+    z-index: 3;
+    margin: 100px;
+    box-shadow: 0px 0px 50px 50px black;
+    transform: translate3d(0, 0, 0);
+}
+
+.hole2 {
+    pointer-events: none;
+    position: absolute;
+    height: 802px;
+    width: 802px;
+    opacity: 1;
+    background-color: black;
+    border-radius: 100%;
+    z-index: 3;
+    margin: 99px;
+}

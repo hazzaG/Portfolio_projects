@@ -7,8 +7,16 @@ body {
     padding: 0;
 }
 
+.fullgrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-area: content content content content;
+}
 
 .box {
+    grid-row: 1;
+    grid-column: 1;
     position: relative;
     height: 80%;
     width: 80%;
@@ -35,6 +43,8 @@ body {
 
 
 .container {
+    grid-row: 2 / span 4;
+    grid-column: 3;
     display: grid;
     position: absolute;
     grid-template-columns: auto;
@@ -45,6 +55,23 @@ body {
     align-items: center;
 }
 
+.container2 {
+    grid-row: 4;
+    grid-column: 4;
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.clip {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
 .orb {
     position: absolute;
     height: 1000px;
@@ -52,11 +79,36 @@ body {
     background-image: conic-gradient(red, blue, green, red);
     border-radius: 100%;
     z-index: 1;
+    animation: spin 5s infinite ease-in-out;
+    transition: 5s;
 
 }
 
+.counterorb {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    background-image: conic-gradient(red, blue, green, red);
+    border-radius: 100%;
+    z-index: 2;
+    transition: 5s;
+    opacity: 0.9;
+}
+
+.counterorb:hover {
+    animation: counterspin 2s infinite ease-in-out;
+    transition: 5s;
+}
+
+@keyframes counterspin {
+    50% {
+        transform: rotate(-360deg);
+        opacity: 0.3;
+    }
+}
+
 .orb:hover {
-    animation: spin 2s infinite linear;
+    animation: spin s infinite linear;
     transition: 2s;
 }
 

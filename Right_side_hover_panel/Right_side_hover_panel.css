@@ -1,0 +1,67 @@
+:root {
+    /* color palet*/
+    --blue: #264653;
+    --cyan: #2a9d8f;
+    --yellow: #e9c46a;
+    --orange: #f4a261;
+    --red: #e76f51;
+
+    /* Background */
+    --center: center;
+    --boxshadow: 10px 10px 5px 5px;
+    /*box shadow*/
+    --textshadow: 3px 3px 2px 2px;
+    /*text shadow*/
+    --width70: 70%;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Below is code for a hover slide in from right sidebar. The code is very weird. It works by sliding across the entire screen from the left but is trasparent as it does so. This is done to make sure that the trasition: transform, can be left at a reasonable speed */
+
+.side_panel {
+    background-color: #264653;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1.5s, animation 1s;
+    opacity: 0;
+    transform: translateX(310%);
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.side_panel:hover {
+    transition: transform 1.2s;
+    transform: translateX(240%);
+}
+
+
+/* End of janky sidebar code */

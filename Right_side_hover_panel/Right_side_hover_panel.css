@@ -65,3 +65,64 @@ body {
 
 
 /* End of janky sidebar code */
+
+/*code for door swing sidebar */
+
+.left_side_panel {
+    background-color: #264653;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: right;
+    position: fixed;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1.5s, animation 1s;
+    opacity: 0;
+    transform: matrix3d(0.09, 0, 1.00, 0.0005, 0.00, 1, 0.00, 0, -1, 0, 0.09, 0, 0, 0, 0, 1);
+    /* use online css matrix3d generator for this */
+    transform-origin: 0% 50%;
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.left_side_panel p {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.left_side_panel img {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.left_side_panel:hover {
+    transition: transform 1.2s;
+    transform: matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
+}
+
+.left_side_panel:hover p {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.left_side_panel:hover img {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+/* End of janky sidebar code */

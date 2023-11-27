@@ -142,6 +142,8 @@ body {
     margin: 339px;
 }
 
+/* this is the Svg converted to a CSS clip path used for a G symbol. This was converted from a google font letter. For a border you would could have a much more simple path */
+
 #clipcon {
     width: 900px;
     height: 900px;

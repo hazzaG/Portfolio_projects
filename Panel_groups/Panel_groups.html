@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel groups</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital@1&family=Manrope:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./Panel_groups.css">
+</head>
+
+<body>
+
+
+    <div id="btn-container" class="fixed-action-btn">
+        <a id="main-btn" class="btn-floating red">
+            <i class="large material-icons">keyboard_arrow_left</i>
+        </a>
+        <ul>
+            <li><a id="btn-red" class="btn-floating hg_red" onclick="slideLeft(this.id),revertSlide()"><i
+                        class="material-icons">brightness_1</i></a></li>
+            <li><a id="btn-orange" class="btn-floating hg_orange" onclick="slideLeft(this.id),revertSlide()"><i
+                        class="material-icons">brightness_1</i></a></li>
+            <li><a id="btn-yellow" class="btn-floating hg_yellow" onclick="slideLeft(this.id),revertSlide()"><i
+                        class="material-icons">brightness_1</i></a></li>
+            <li><a id="btn-cyan" class="btn-floating hg_cyan" onclick="slideLeft(this.id),revertSlide()"><i
+                        class="material-icons">brightness_1</i></a></li>
+            <li><a id="btn-blue" class="btn-floating hg_blue" onclick="slideLeft(this.id),revertSlide()"><i
+                        class="material-icons">brightness_1</i></a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="side_panel_container"></div>
+    <div id="blue_panel" class="side_panel_blue ">
+        <div class="panel_container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda exercitationem eos similique vitae
+                cupiditate nostrum. Excepturi saepe ipsa inventore quia. Earum necessitatibus accusamus expedita harum
+                incidunt est doloremque! Enim, odio.</p><br>
+
+            <img src="https://images.pexels.com/photos/18968283/pexels-photo-18968283/free-photo-of-skyscraper-in-city-downtown-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="building at dusk">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste inventore blanditiis eos omnis. Nulla
+                laborum, asperiores rerum pariatur quae dolorum minus deleniti illum error culpa aliquid, iure corporis
+                assumenda nobis reprehenderit debitis ducimus, sed nihil? Laboriosam perspiciatis, mollitia natus
+                corporis, tempora quod voluptatem nulla exercitationem reprehenderit culpa consectetur odio aut.</p>
+        </div>
+    </div>
+
+    <div class="side_panel_container"></div>
+    <div id="cyan_panel" class="side_panel_cyan ">
+        <div class="panel_container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda exercitationem eos similique vitae
+                cupiditate nostrum. Excepturi saepe ipsa inventore quia. Earum necessitatibus accusamus expedita harum
+                incidunt est doloremque! Enim, odio.</p><br>
+
+            <img src="https://images.pexels.com/photos/18968283/pexels-photo-18968283/free-photo-of-skyscraper-in-city-downtown-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="building at dusk">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste inventore blanditiis eos omnis. Nulla
+                laborum, asperiores rerum pariatur quae dolorum minus deleniti illum error culpa aliquid, iure corporis
+                assumenda nobis reprehenderit debitis ducimus, sed nihil? Laboriosam perspiciatis, mollitia natus
+                corporis, tempora quod voluptatem nulla exercitationem reprehenderit culpa consectetur odio aut.</p>
+        </div>
+    </div>
+
+    <div class="side_panel_container"></div>
+    <div id="yellow_panel" class="side_panel_yellow ">
+        <div class="panel_container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda exercitationem eos similique vitae
+                cupiditate nostrum. Excepturi saepe ipsa inventore quia. Earum necessitatibus accusamus expedita harum
+                incidunt est doloremque! Enim, odio.</p><br>
+
+            <img src="https://images.pexels.com/photos/18968283/pexels-photo-18968283/free-photo-of-skyscraper-in-city-downtown-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="building at dusk">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste inventore blanditiis eos omnis. Nulla
+                laborum, asperiores rerum pariatur quae dolorum minus deleniti illum error culpa aliquid, iure corporis
+                assumenda nobis reprehenderit debitis ducimus, sed nihil? Laboriosam perspiciatis, mollitia natus
+                corporis, tempora quod voluptatem nulla exercitationem reprehenderit culpa consectetur odio aut.</p>
+        </div>
+    </div>
+
+    <div class="side_panel_container"></div>
+    <div id="orange_panel" class="side_panel_orange ">
+        <div class="panel_container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda exercitationem eos similique vitae
+                cupiditate nostrum. Excepturi saepe ipsa inventore quia. Earum necessitatibus accusamus expedita harum
+                incidunt est doloremque! Enim, odio.</p><br>
+
+            <img src="https://images.pexels.com/photos/18968283/pexels-photo-18968283/free-photo-of-skyscraper-in-city-downtown-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="building at dusk">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste inventore blanditiis eos omnis. Nulla
+                laborum, asperiores rerum pariatur quae dolorum minus deleniti illum error culpa aliquid, iure corporis
+                assumenda nobis reprehenderit debitis ducimus, sed nihil? Laboriosam perspiciatis, mollitia natus
+                corporis, tempora quod voluptatem nulla exercitationem reprehenderit culpa consectetur odio aut.</p>
+        </div>
+    </div>
+
+
+    <div class="side_panel_container"></div>
+    <div id="red_panel" class="side_panel_red ">
+        <div class="panel_container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda exercitationem eos similique vitae
+                cupiditate nostrum. Excepturi saepe ipsa inventore quia. Earum necessitatibus accusamus expedita harum
+                incidunt est doloremque! Enim, odio.</p><br>
+
+            <img src="https://images.pexels.com/photos/18968283/pexels-photo-18968283/free-photo-of-skyscraper-in-city-downtown-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="building at dusk">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste inventore blanditiis eos omnis. Nulla
+                laborum, asperiores rerum pariatur quae dolorum minus deleniti illum error culpa aliquid, iure corporis
+                assumenda nobis reprehenderit debitis ducimus, sed nihil? Laboriosam perspiciatis, mollitia natus
+                corporis, tempora quod voluptatem nulla exercitationem reprehenderit culpa consectetur odio aut.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./Panel_groups.js"></script>
+</body>
+
+</html>

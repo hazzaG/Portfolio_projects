@@ -1,0 +1,223 @@
+:root {
+    --color-blue: #264653;
+    --color-cyan: #2a9d8f;
+    --color-yellow: #e9c46a;
+    --color-orange: #f4a261;
+    --color-red: #e76f51;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+
+
+
+    --primary: #31393c;
+    --primary-rgb: 31, 31, 31;
+
+}
+
+[data-theme="dark"] {
+    --primary: #fefae0;
+
+}
+
+.hg_blue {
+    background-color: var(--color-blue);
+}
+
+.hg_cyan {
+    background-color: var(--color-cyan)
+}
+
+.hg_yellow {
+    background-color: var(--color-yellow);
+}
+
+.hg_orange {
+    background-color: var(--color-orange);
+}
+
+.hg_red {
+    background-color: var(--color-red);
+}
+
+.revert {
+    transition: 0.1s;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-left: 2vh;
+}
+
+.side_panel_blue {
+    background-color: #264653;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1s, animation 1s;
+    opacity: 0;
+    transform: translateX(310%);
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+    z-index: 10;
+}
+
+.side_panel_cyan {
+    background-color: #2a9d8f;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1s, animation 1s;
+    opacity: 0;
+    transform: translateX(305%);
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+    z-index: 9;
+}
+
+.side_panel_yellow {
+    background-color: #e9c46a;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1s, animation 1s;
+    opacity: 0;
+    transform: translateX(300%);
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+    z-index: 8;
+}
+
+.side_panel_orange {
+    background-color: #f4a261;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1s, animation 1s;
+    opacity: 0;
+    transform: translateX(295%);
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+    z-index: 7;
+}
+
+.side_panel_red {
+    background-color: #e76f51;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-align: left;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: end;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: transform 1s, animation 1s;
+    opacity: 0;
+    transform: translateX(290%);
+    animation: fade-in 1s ease-out 1s 1 normal forwards;
+    z-index: 6;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide {
+    transition: transform 1s;
+    transform: translateX(130%);
+}
+
+
+/* Materilize edits */
+
+.material-icons {
+    pointer-events: none;
+    user-select: none;
+}
+
+.fixed-action-btn {
+    position: fixed;
+    right: 13.1%;
+    top: 1vh;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 997;
+}
+
+.fixed-action-btn.direction-bottom ul {
+    top: 40px;
+
+}
+
+.btn-floating {
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.btn-floating>i:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+#btn-container {
+    transition: transform 1s;
+}
+
+.btn-shift {
+    transition: transform 1s;
+    transform: translateX(-720%);
+}
+
+#btn-red:hover {
+    background-color: var(--color-red);
+}
+
+#btn-orange:hover {
+    background-color: var(--color-orange);
+}
+
+#btn-yellow:hover {
+    background-color: var(--color-yellow);
+}
+
+#btn-cyan:hover {
+    background-color: var(--color-cyan);
+}
+
+#btn-blue:hover {
+    background-color: var(--color-blue);
+}

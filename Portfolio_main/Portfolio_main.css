@@ -75,7 +75,7 @@ body {
     right: 0;
     transform: translateX(95%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
-    z-index: 10;
+    z-index: 710;
 }
 
 .side_panel_cyan {
@@ -94,7 +94,7 @@ body {
     right: 0;
     transform: translateX(90%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
-    z-index: 9;
+    z-index: 709;
 }
 
 .side_panel_yellow {
@@ -113,7 +113,7 @@ body {
     right: 0;
     transform: translateX(85%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
-    z-index: 8;
+    z-index: 708;
 }
 
 .side_panel_orange {
@@ -132,7 +132,7 @@ body {
     right: 0;
     transform: translateX(80%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
-    z-index: 7;
+    z-index: 707;
 }
 
 .side_panel_red {
@@ -151,7 +151,7 @@ body {
     right: 0;
     transform: translateX(75%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
-    z-index: 6;
+    z-index: 706;
 }
 
 /*@keyframes fade-in {
@@ -370,5 +370,124 @@ body {
 
 
 
+/* breathing background*/
 
-/*------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fullmain {
+    background-image: linear-gradient(#8ecae6, #219ebc, #023047);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.fullmain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom,
+            #8ecae6,
+            #219ebc,
+            #023047);
+    transition: transform 3.8s;
+    z-index: -1;
+}
+
+
+/*This moves the gradient. Not it's z-index is not specified so is 0. This means it will display before a -1 z-index */
+.scroll::before {
+    transform: translateY(-50%);
+}
+
+
+
+.wack {
+    z-index: 0;
+}
+
+
+.fullmain2 {
+    background-image: linear-gradient(#e68e9e, #bc2150, #47020d);
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.fullmain2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom,
+            #e68e9e, #bc2150, #47020d);
+    transition: transform 3.8s;
+    z-index: 2;
+}
+
+/*--------------------*/
+
+.divhead {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1vh solid black;
+    z-index: 500;
+}
+
+h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    border: 1vh black solid;
+    background-color: bisque;
+}
+
+#imghand {
+    float: left;
+    flex: content;
+    height: 10vh;
+    opacity: 50%;
+}
+
+.header {
+    background-image: linear-gradient(red, blue);
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(to bottom, red, blue);
+    z-index: -1;
+    transition: 2s;
+
+}
+
+.scroll:hover::before {
+    transform: translateY(-50%);
+
+}
+
+/*-------------------*/

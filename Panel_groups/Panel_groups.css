@@ -197,7 +197,6 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 18%;
-        top: 1vh;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -212,7 +211,7 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 18%;
-        top: 1vh;
+
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -230,7 +229,7 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 17%;
-        top: 1vh;
+
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -247,7 +246,7 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 15.8%;
-        top: 1vh;
+
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -264,7 +263,6 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 15.3%;
-        top: 1vh;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -281,7 +279,6 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 14.8%;
-        top: 1vh;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -297,7 +294,6 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 14.5%;
-        top: 1vh;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;
@@ -314,7 +310,6 @@ body {
     .fixed-action-btn {
         position: fixed;
         right: 14%;
-        top: 1vh;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 997;

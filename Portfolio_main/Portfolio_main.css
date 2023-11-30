@@ -1,23 +1,42 @@
 :root {
     --color-blue: #264653;
+    --color-blue-rgb: 38, 70, 83;
     --color-cyan: #2a9d8f;
+    --color-cyan-rgb: 42, 157, 143;
     --color-yellow: #e9c46a;
+    --color-yellow-rgb: 233, 196, 106;
     --color-orange: #f4a261;
+    --color-orange-rgb: 244, 162, 97;
     --color-red: #e76f51;
+    --color-red-rgb: 231, 111, 81;
+    --color-gray: #545450;
+    --color-gray-rgb: 84, 84, 80;
+    --color-black: #2d2723;
+    --color-black-rgb: 45, 39, 35;
+    --color-white: #fffaF0;
+    --color-white-rgb: 255, 250, 240;
+
+
+
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 
 
 
-    --primary: #31393c;
-    --primary-rgb: 31, 31, 31;
+    --primary: #3b3c37;
+    --primary-rgb: 59, 60, 55;
+    --primatybg: #fffaF0;
+    --primatybg-rgb: 255, 250, 240;
+
 
 }
 
 [data-theme="dark"] {
-    --primary: #fefae0;
-
+    --primary: #fffaF0;
+    --primary-rgb: 255, 250, 240;
+    --primatybg: #3b3c37;
+    --primatybg-rgb: 59, 60, 55;
 }
 
 .hg_blue {
@@ -50,8 +69,8 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
-    background-color: #fefae0;
 }
+
 
 .panel_container p,
 .panel_container img {
@@ -76,6 +95,7 @@ body {
     transform: translateX(95%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
     z-index: 710;
+    box-shadow: 0px 0px 0.5vw 0.5vw var(--color-black);
 }
 
 .side_panel_cyan {
@@ -95,6 +115,7 @@ body {
     transform: translateX(90%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
     z-index: 709;
+    box-shadow: 0px 0px 0.5vw 0.5vw var(--color-black);
 }
 
 .side_panel_yellow {
@@ -114,6 +135,7 @@ body {
     transform: translateX(85%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
     z-index: 708;
+    box-shadow: 0px 0px 0.5vw 0.5vw var(--color-black);
 }
 
 .side_panel_orange {
@@ -133,6 +155,7 @@ body {
     transform: translateX(80%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
     z-index: 707;
+    box-shadow: 0px 0px 0.5vw 0.5vw var(--color-black);
 }
 
 .side_panel_red {
@@ -152,6 +175,7 @@ body {
     transform: translateX(75%);
     animation: fade-in 1s ease-out 1s 1 normal forwards;
     z-index: 706;
+    box-shadow: 0px 0px 0.5vw 0.5vw var(--color-black);
 }
 
 /*@keyframes fade-in {
@@ -179,10 +203,17 @@ body {
     width: 2.1%;
 }
 
+.lightUp {
+    box-shadow: inset 0px 0px 1px 1px var(--color-white);
+}
+
+
 .material-icons {
     pointer-events: none;
     user-select: none;
 }
+
+
 
 .fixed-action-btn {
     position: fixed;
@@ -191,6 +222,8 @@ body {
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 997;
+    width: 5%;
+    height: 5%;
 }
 
 @media (max-width: 640px) {
@@ -371,6 +404,9 @@ body {
 
 
 /* breathing background*/
+html {
+    height: 100%;
+}
 
 body {
     padding: 0;
@@ -379,11 +415,13 @@ body {
 }
 
 .fullmain {
-    background-image: linear-gradient(#8ecae6, #219ebc, #023047);
+    background-image: linear-gradient(rgba(var(--color-blue-rgb))5%, rgba(var(--color-cyan-rgb))5%, rgba(var(--color-red-rgb)),
+            rgba(var(--color-orange-rgb)), rgba(var(--color-yellow-rgb)));
     position: relative;
-    z-index: 1;
+    z-index: -99;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
+
 
 }
 
@@ -394,100 +432,26 @@ body {
     left: 0;
     width: 100%;
     height: 200%;
-    background: linear-gradient(to bottom,
-            #8ecae6,
-            #219ebc,
-            #023047);
-    transition: transform 3.8s;
-    z-index: -1;
+    background: linear-gradient(to bottom, rgba(var(--color-blue-rgb))5%, rgba(var(--color-cyan-rgb))5%, rgba(var(--color-red-rgb)),
+            rgba(var(--color-orange-rgb)), rgba(var(--color-yellow-rgb)));
+    transition: transform 30s;
+    z-index: -101;
 }
 
-
-/*This moves the gradient. Not it's z-index is not specified so is 0. This means it will display before a -1 z-index */
 .scroll::before {
     transform: translateY(-50%);
 }
 
 
-
-.wack {
-    z-index: 0;
-}
-
-
-.fullmain2 {
-    background-image: linear-gradient(#e68e9e, #bc2150, #47020d);
-    position: relative;
-    z-index: 3;
-    overflow: hidden;
-    height: 100vh;
-
-}
-
-.fullmain2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    background: linear-gradient(to bottom,
-            #e68e9e, #bc2150, #47020d);
-    transition: transform 3.8s;
-    z-index: 2;
-}
+/*This moves the gradient. Not it's z-index is not specified so is 0. This means it will display before a -1 z-index */
 
 /*--------------------*/
 
-.divhead {
-    position: sticky;
-    top: 0;
+header {
+    position: fixed;
     width: 100%;
-    height: 25%;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1vh solid black;
     z-index: 500;
-}
-
-h1 {
-    font-family: 'IBM Plex Mono', monospace;
-    border: 1vh black solid;
-    background-color: bisque;
-}
-
-#imghand {
-    float: left;
-    flex: content;
-    height: 10vh;
-    opacity: 50%;
-}
-
-.header {
-    background-image: linear-gradient(red, blue);
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
-
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    background-image: linear-gradient(to bottom, red, blue);
-    z-index: -1;
-    transition: 2s;
-
-}
-
-.scroll:hover::before {
-    transform: translateY(-50%);
-
+    background-color: var(--color-cyan);
 }
 
 /*-------------------*/

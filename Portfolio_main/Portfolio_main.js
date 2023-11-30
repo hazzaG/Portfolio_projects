@@ -114,7 +114,7 @@ const fullmain = document.getElementById("fullmain");
 
 function breathCheck() {
     if (topBreath) {
-        topBreath = setInterval(breath, 4600);
+        topBreath = setInterval(breath, 32000);
     }
 }
 
@@ -131,7 +131,7 @@ function stopBreath() {
 }
 
 
-setInterval(breathFocus, 4600)
+setInterval(breathFocus, 32000)
 function breathFocus() {
     if (document.hasFocus()) {
         breath();

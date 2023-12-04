@@ -23,26 +23,35 @@
         </div>
     </header>
 
-
+    <div class="record_container">
+        <div class="record_grid">
+            <div class="record_grid_item record_lines"></div>
+            <div class="record_grid_item record_dirt"></div>
+            <div class="record_grid_item record_center"></div>
+            <div class="record_grid_item record_shine"></div>
+        </div>
+    </div>
 
 
 
     <div id="btn-container" class="fixed-action-btn">
-        <a id="main-btn" class="btn-floating lightUp red waves-effect">
+        <a id="main-btn" class="btn-floating red waves-effect">
             <i class="large material-icons">chevron_left</i>
         </a>
         <ul>
-            <li><a id="btn-collapse" class="btn-floating lightUp red" onclick="slideLeft(this.id),revertSlide()"><i
+            <li><a id="btn-lock" class="btn-floating hidden red" onclick="toggleLock(this.id)"><i id="btn-lock-i"
+                        class="material-icons">lock</i></a></li>
+            <li><a id="btn-collapse" class="btn-floating red" onclick="slideLeft(this.id)"><i
                         class="material-icons">chevron_right</i></a></li>
-            <li><a id="btn-red" class="btn-floating hg_red" onclick="slideLeft(this.id),revertSlide()"><i
+            <li><a id="btn-red" class="btn-floating hg_red" onclick="slideLeft(this.id)"><i
                         class="material-icons">brightness_1</i></a></li>
-            <li><a id="btn-orange" class="btn-floating hg_orange" onclick="slideLeft(this.id),revertSlide()"><i
+            <li><a id="btn-orange" class="btn-floating hg_orange" onclick="slideLeft(this.id)"><i
                         class="material-icons">brightness_1</i></a></li>
-            <li><a id="btn-yellow" class="btn-floating hg_yellow" onclick="slideLeft(this.id),revertSlide()"><i
+            <li><a id="btn-yellow" class="btn-floating hg_yellow" onclick="slideLeft(this.id)"><i
                         class="material-icons">brightness_1</i></a></li>
-            <li><a id="btn-cyan" class="btn-floating hg_cyan" onclick="slideLeft(this.id),revertSlide()"><i
+            <li><a id="btn-cyan" class="btn-floating hg_cyan" onclick="slideLeft(this.id)"><i
                         class="material-icons">brightness_1</i></a></li>
-            <li><a id="btn-blue" class="btn-floating hg_blue" onclick="slideLeft(this.id),revertSlide()"><i
+            <li><a id="btn-blue" class="btn-floating hg_blue" onclick="slideLeft(this.id)"><i
                         class="material-icons">brightness_1</i></a></li>
 
         </ul>
@@ -142,6 +151,8 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./Portfolio_main.js"></script>
 </body>

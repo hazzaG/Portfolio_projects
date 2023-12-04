@@ -63,6 +63,10 @@
     transition: 0.1s;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 body {
     display: flex;
     flex-flow: row wrap;
@@ -453,5 +457,61 @@ header {
     z-index: 500;
     background-color: var(--color-cyan);
 }
+
+.record_container {
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+
+.record_grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+}
+
+.record_grid_item {
+    position: absolute;
+    margin: auto;
+    padding: auto;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.record_lines {
+    height: 1000px;
+    width: 1000px;
+
+    border-radius: 100%;
+    z-index: 1003;
+    animation: spin 5s infinite ease-in-out;
+    transition: 5s;
+}
+
+.record_dirt {
+    background-image: repeating-radial-gradient(rgba(var(--color-black))80%, rgba(var(--color-gray))19%, rgba(var(--color-white))1%);
+}
+
+.record_center {
+    --color-gray: #545450;
+    --color-gray-rgb: 84, 84, 80;
+    --color-black: #2d2723;
+    --color-black-rgb: 45, 39, 35;
+    --color-white: #fffaF0;
+    --color-white-rgb: 255, 250, 240;
+
+}
+
+.record_shine {}
 
 /*-------------------*/

@@ -111,26 +111,37 @@ function slideLeft(clicked_id) {
 */
 
 
-
-
-var offClickReference = (function offClickFunction() {
-    $(document).click(function (event) {
-        var $target = $(event.target);
-        if (!$target.closest("#blue_panel, #cyan_panel, #yellow_panel, #orange_panel, #red_panel, #btn-blue, #btn-cyan, #btn-yellow, #btn-orange, #btn-red, #main-btn").length) {
-            $("#blue_panel, #cyan_panel, #yellow_panel, #orange_panel, #red_panel").removeClass('slide');
-            $("#btn-container").removeClass('btn-shift', 'positionOut');
-            $("#btn-container").addClass('positionIn');
-            $("#btn-lock").addClass('hidden');
-        }
-    });
-
-}());
-
+let lock = false;
 ///*
 function toggleLock() {
     $("#btn-lock-i").text((i, t) => t == 'lock' ? 'lock_open' : 'lock');
-
+    if (lock) {
+        lock = false
+    }
+    else {
+        lock = true;
+    }
 }
+
+
+var offClickReference = (function offClickFunction() {
+    while (lock = false) {
+        $(document).click(function (event) {
+            var $target = $(event.target);
+            if (!$target.closest("#blue_panel, #cyan_panel, #yellow_panel, #orange_panel, #red_panel, #btn-blue, #btn-cyan, #btn-yellow, #btn-orange, #btn-red, #main-btn").length) {
+                $("#blue_panel, #cyan_panel, #yellow_panel, #orange_panel, #red_panel").removeClass('slide');
+                $("#btn-container").removeClass('btn-shift', 'positionOut');
+                $("#btn-container").addClass('positionIn');
+                $("#btn-lock").addClass('hidden');
+            }
+        });
+    }
+}());
+
+/*
+
+*/
+
 
 //*/
 
